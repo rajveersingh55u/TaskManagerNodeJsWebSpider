@@ -1,0 +1,55 @@
+<!-- Coding Challenge: Task Management API
+ Objective:
+ Create a RESTful API for a Task Management Application using Node.js, Express, and 
+MongoDB. The application should demonstrate understanding of backend development, 
+database interactions, and API design.
+ Requirements:
+ 1. **
+ Project Setup**- Use Node.js with Express.js- Use MongoDB (Mongoose) for database- Implement proper error handling- Use environment variables for configuration
+ 2. **
+ Data Models**
+ Create a Task model with the following schema:
+ ```javascript
+ {
+ }
+  title: String, // Required, max 100 characters
+  description: String, // Optional
+  status: String, // Enum: ['TODO', 'IN_PROGRESS', 'COMPLETED']
+  priority: String, // Enum: ['LOW', 'MEDIUM', 'HIGH']
+  dueDate: Date, // Optional
+  createdAt: Date,
+  updatedAt: Date
+ 3. **
+ API Endpoints**
+ Implement the following REST endpoints:
+a. `POST /tasks`- Create a new task- Validate input data- Return created task- Set default status to 'TODO' if not provided- Automatically set createdAt and updatedAt
+ b. `GET /tasks`- Retrieve all tasks- Support query parameters:
+  - `status`: Filter by task status
+  - `priority`: Filter by task priority
+  - `sort`: Sort by createdAt or dueDate (ascending/descending)- Implement pagination (limit and skip)
+ c. `GET /tasks/:id`- Retrieve a specific task by ID- Return 404 if task not found
+ d. `PUT /tasks/:id`- Update an existing task- Validate input data- Update updatedAt timestamp- Return updated task
+e. `DELETE /tasks/:id`- Delete a specific task- Return 204 No Content on successful deletion
+ 4. **
+ Additional Requirements**- Implement input validation using a library like `joi` or `express-validator`- Add basic error handling middleware- Create a `README.md` with setup and run instructions- Include a Postman collection or curl commands for testing
+ 5. **
+ Bonus Points**- Implement authentication middleware- Add logging using Winston or Morgan- Write unit tests for models and routes- Implement soft delete instead of hard delete
+ **
+ Evaluation Criteria:**
+ 1. Code Quality (30%)- Clean, readable code- Proper error handling- Efficient database queries
+ 2. API Design (25%)- RESTful principles- Proper status codes- Comprehensive error responses
+3. Functionality (25%)- All endpoints working correctly- Input validation- Filtering and sorting
+ 4. Documentation (10%)- Clear README- Comments where necessary
+ 5. Bonus Features (10%)- Additional implementations beyond core requirements
+ **Submission Instructions
+ :**- Upload code to a GitHub repository & share the public access link.- Include a `README.md` with setup instructions- Make the database script (schema and data) and commit to git inside db folder- Provide a brief explanation of design decisions- Commit frequently to show work process
+ **Recommended Tech Stack:**- Node.js- Express.js- MongoDB (Mongoose)- Joi (Validation)- dotenv (Environment Variables)
+ **Suggested Development Approach:**
+ 1. Set up project structure
+2. Configure database connection
+ 3. Create task model
+ 4. Implement validation
+ 5. Create routes and controllers
+ 6. Add error handling
+ 7. Test endpoints
+ 8. Refactor and optimize -->
